@@ -3,17 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dédal des Couleurs</title>
-    <link rel="stylesheet" href="Documents/style.css">
+    <title>Dedal des Couleurs</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <header class="hero-section">
+        <img src="large.png" alt="Dedal des Couleurs" class="hero-background">
         <div class="overlay">
-            <h1>DÉDAL DES COULEURS</h1>
+            <h1>DEDAL DES COULEURS</h1>
         </div>
-    </div>
-    <div class="description">
-        <p>"Dédal des Couleurs" est une galerie d'art située au cœur de Paris, dédiée à l'œuvre de grands maîtres du XXe siècle. Nous avons le plaisir de vous présenter des œuvres d'artistes emblématiques tels que Chaim Soutine, Amedeo Modigliani, Moïse Kikoïne, Jules Pascin, Marc Chagall, et Pablo Picasso. Dans notre galerie, chaque œuvre est une invitation à plonger dans l'univers créatif de ces artistes fascinants. Rejoignez-nous pour célébrer l'art et la diversité des couleurs !</p>
-    </div>
+        <p>"Dédal des Couleurs" est une galerie d'art située au cœur de Paris, dédiée à l'œuvre de grands maîtres du XXe siècle. Nous avons le plaisir de vous présenter des œuvres d'artistes emblématiques tels que Chaim Soutine, Amedeo Modigliani, Moïse Kikoïne, Jules Pascin, Marc Chagall, et Pablo Picasso.
+            Dans notre galerie, chaque œuvre est une invitation à plonger dans l'univers créatif de ces artistes fascinants. Rejoignez-nous pour célébrer l'art et la diversité des couleurs !
+        </p>
+    </header>
+    
+    <main>
+        <section class="gallery">
+            <div id="square1"></div>
+            <div id="square2"></div>
+            <div class="painting">
+                <img src="long1.png" alt="Portrait de Jeanne Hébuterne">
+                <div id="square3"></div>
+                <p>Amedeo Modigliani, Portrait de Jeanne Hébuterne au grand chapeau, 1918-1919, Collection privée</p>
+            </div>
+            <div class="painting">
+                <img src="long2.png" alt="Portrait de Chaïm Soutine">
+                <p>Amadeo Modigliani, portrait de ChaÏm Soutine (1916), huile sur toile (100 x 65 cm)</p>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>DEDAL DES COULEURS</h2>
+            <h3>Contact</h3>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p><strong>Nom de l'entreprise :</strong> DEDAL DES COULEURS</p>
+                    <p><strong>Adresse :</strong> 10 RUE DE LA RÉPUBLIQUE,</p>
+                    <p>75000 PARIS</p>
+                    <p><strong>Téléphone :</strong> 01.23.45.67.89</p>
+                    <p><strong>Fax :</strong> 01.23.45.67.89</p>
+                    <p><strong>Email :</strong> dedal@gmail.com</p>
+                    <p><strong>Personne à contacter :</strong> Paul Decerway</p>
+                </div>
+                <form class="newsletter-form">
+                    <h3>Inscris-toi à notre newsletter !</h3>
+                    <input type="text" placeholder="Nom" required>
+                    <input type="text" placeholder="Prénom" required>
+                    <input type="email" placeholder="Adresse mail" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

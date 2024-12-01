@@ -1,54 +1,268 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f4f4;
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.container {
-    position: relative;
+.hero-background {
     width: 100%;
-    max-width: 800px;
-    height: 400px;
-    background-image: url('Documents/picasso image fond');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 75%;
+    object-fit: cover;
 }
 
 .overlay {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.overlay h1 {
+    top: 37.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
     color: white;
-    font-size: 2.5em;
     text-align: center;
 }
 
-.description {
-    max-width: 800px;
-    margin: 20px;
+.hero-section p{
+    margin: 2.5% 10% 10%  
+}
+
+p{
+    color: #194950;
+    font-size: calc(15px + 0.390625vw);
+    font-family: 'Times New Roman', Times, serif
+}
+
+h1 {
+    font-size: calc(55px + 0.25vw);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
     padding: 20px;
-    background-color: #ffffff;
+}
+
+.painting {
+    text-align: center;
+    margin: 10px;
+    flex-basis: 50%;
+}
+
+.painting p{
+    margin: 2% 20% 20% ;
+}
+
+.painting img {
+    width: 50%; 
+    height: 65%;
+    overflow: hidden;
+    object-fit: cover; 
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact {
+    padding: 20px;
+    background-color: white;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.newsletter-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: justify;
-    font-size: 1.1em;
-    line-height: 1.6;
+}
+
+.contact-info {
+    background-color: #194950;
+    color: white;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: white;
+    text-align: center;
+}
+
+
+.newsletter-form {
+    background-color: #194950;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    background-color: #8ba3ab;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form h3{
+    color: white;
+}
+
+.newsletter-form button:hover {
+    background-color: #156540;
+}
+
+.contact h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: calc(50px + 0.390625vw);
+    color: #1A9D88;
+    line-height: 1;
+}
+
+.contact > h3 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: calc(35px + 0.390625vw);
+    color: #1A9D88;
+    line-height: 1;
+}
+
+.contact h2::before,
+.contact h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15%; 
+    height: 60%;
+    background-color: #194950;
+}
+
+.contact h2::before {
+    left: 0;
+}
+
+.contact h2::after {
+    right: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info,
+    .newsletter-form {
+        width: 90%;
+        max-width: none;
+    }
+
+    .contact h2{
+        font-size: calc(25px + 0.390625vw);
+    }
+
+    .contact > h3{
+        font-size: calc(20px + 0.390625vw);
+    } 
+
+    #square1, #square2, #square3, #square4 {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #square1 {
+        width: 7%;
+        left: 0;
+        position: absolute;
+        height: 80px;
+        background-color: #194950;
+    }
+
+    #square2 {
+        width: 5%;
+        left: 3%;
+        margin-top: 7vh;
+        position: absolute;
+        height: 10px;
+        background-color: #1A9D88;
+    }
+
+    #square3 {
+        width: 7px;
+        position: absolute;
+        top: 35%; 
+        left: 20%;
+        height: 14vh;
+        background-color: #A5DEAA;
+    }
+
+
+    #square4 {
+        width: 7px;
+        position: absolute;
+        top: 100%;
+        left: 62%; 
+        height: 300px;
+        background-color: #1A9D88;
+    }
+}
+
+/* Use relative positioning for painting containers */
+.painting {
+    position: relative;
 }
