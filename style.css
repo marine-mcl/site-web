@@ -262,7 +262,6 @@ h1 {
     }
 }
 
-/* Use relative positioning for painting containers */
 .painting {
     position: relative;
 }
